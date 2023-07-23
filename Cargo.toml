@@ -17,7 +17,7 @@ aead = { version = "0.5.2", default-features = false, optional = true }
 arrayref = { version = "0.3.6", default-features = false }
 # needs to match parity-scale-codec which is "=0.7.0"
 arrayvec = { version = "0.7.0", default-features = false }
-curve25519-dalek = { version = "4.0.0", default-features = false, features = ["digest", "zeroize"] }
+curve25519-dalek = { version = "4.0.0", default-features = false, features = ["digest", "zeroize", "precomputed-tables"] }
 subtle = { version = "2.4.0", default-features = false }
 merlin = { version = "3.0.0", default-features = false }
 rand_core = { version = "0.6.2", default-features = false }
