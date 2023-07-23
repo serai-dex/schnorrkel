@@ -17,7 +17,7 @@ aead = { version = "0.5.2", default-features = false, optional = true }
 arrayref = { version = "0.3.6", default-features = false }
 # needs to match parity-scale-code which is "=0.7.0"
 arrayvec = { version = "0.7.0", default-features = false }
-curve25519-dalek = { version = "4.0.0-rc.2", default-features = false, features = ["digest", "zeroize"] }
+curve25519-dalek = { version = "4.0.0", default-features = false, features = ["digest", "zeroize"] }
 subtle = { version = "2.5.0", default-features = false }
 merlin = { version = "3.0.0", default-features = false }
 rand_core = { version = "0.6.2", default-features = false }
@@ -60,4 +60,3 @@ getrandom = ["rand_core/getrandom"]
 # wasm-bindgen = ["getrandom/wasm-bindgen"]
 # See https://github.com/rust-lang/cargo/issues/9210
 # and https://github.com/w3f/schnorrkel/issues/65#issuecomment-786923588
-
