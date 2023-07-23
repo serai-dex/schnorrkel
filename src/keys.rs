@@ -196,7 +196,7 @@ impl MiniSecretKey {
         // We then divide by the cofactor to internally keep a clean
         // representation mod l.
         scalars::divide_scalar_bytes_by_cofactor(&mut key);
-        let key = Scalar::from_bits(key);
+        let key = Scalar::from_bytes_mod_order(key);
 
         let mut nonce = [0u8; 32];
         nonce.copy_from_slice(&r.as_slice()[32..64]);
@@ -483,7 +483,7 @@ impl SecretKey {
         bytes
     }
 
-    /* Unused tooling removed to reduce dependencies. 
+    /* Unused tooling removed to reduce dependencies.
     /// Convert this `SecretKey` into an Ed25519 expanded secret key.
     #[cfg(feature = "ed25519_dalek")]
     pub fn to_ed25519_expanded_secret_key(&self) -> ed25519_dalek::ExpandedSecretKey {
@@ -524,7 +524,7 @@ impl SecretKey {
         // We divide by the cofactor to internally keep a clean
         // representation mod l.
         scalars::divide_scalar_bytes_by_cofactor(&mut key);
-        let key = Scalar::from_bits(key);
+        let key = Scalar::from_bytes_mod_order(key);
 
         let mut nonce: [u8; 32] = [0u8; 32];
         nonce.copy_from_slice(&bytes[32..64]);
