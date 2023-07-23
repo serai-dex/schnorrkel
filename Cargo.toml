@@ -15,10 +15,10 @@ edition = "2021"
 [dependencies]
 aead = { version = "0.5.2", default-features = false, optional = true }
 arrayref = { version = "0.3.6", default-features = false }
-# needs to match parity-scale-code which is "=0.7.0"
+# needs to match parity-scale-codec which is "=0.7.0"
 arrayvec = { version = "0.7.0", default-features = false }
 curve25519-dalek = { version = "4.0.0", default-features = false, features = ["digest", "zeroize"] }
-subtle = { version = "2.5.0", default-features = false }
+subtle = { version = "2.4.0", default-features = false }
 merlin = { version = "3.0.0", default-features = false }
 rand_core = { version = "0.6.2", default-features = false }
 serde_crate = { version = "1.0.130", package = "serde", default-features = false, optional = true }
